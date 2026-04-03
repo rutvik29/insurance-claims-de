@@ -1,0 +1,64 @@
+{
+  "start_time": "2026-04-02T21:08:19.166702",
+  "steps": {
+    "generate": {
+      "rows_in": 0,
+      "rows_out": 15450,
+      "elapsed_s": 2.21
+    },
+    "profile": {
+      "rows_in": 15450,
+      "rows_out": 15450,
+      "elapsed_s": 0.06
+    },
+    "clean": {
+      "rows_in": 15450,
+      "rows_out": 15000,
+      "elapsed_s": 0.44
+    },
+    "transform": {
+      "rows_in": 15000,
+      "rows_out": 26879,
+      "elapsed_s": 0.05,
+      "tables_created": [
+        "analytical",
+        "dim_customer",
+        "dim_policy",
+        "fact_claims",
+        "claims_per_customer",
+        "avg_claim_by_type",
+        "fraud_rate_by_province"
+      ]
+    },
+    "load": {
+      "rows_in": 26879,
+      "rows_out": 26879,
+      "elapsed_s": 0.58,
+      "tables": {
+        "analytical": 10000,
+        "dim_customer": 1983,
+        "dim_policy": 2896,
+        "fact_claims": 10000,
+        "claims_per_customer": 1983,
+        "avg_claim_by_type": 7,
+        "fraud_rate_by_province": 10
+      }
+    },
+    "validate": {
+      "rows_in": 0,
+      "rows_out": 0,
+      "elapsed_s": 0.0,
+      "dq_checks": {
+        "fact_claims_nulls": 0,
+        "fact_claims_rows": 10000,
+        "fraud_flag_rate": 0.0654,
+        "high_value_claim_pct": 36.28,
+        "dim_customer_rows": 1983,
+        "customer_id_unique": true
+      }
+    }
+  },
+  "status": "SUCCESS",
+  "end_time": "2026-04-02T21:08:22.714730",
+  "total_elapsed_s": 3.55
+}

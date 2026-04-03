@@ -1,0 +1,12 @@
+database:
+  path: "data/warehouse/insurance_claims.db"
+data:
+  raw_dir: "data/raw"
+  staging_dir: "data/staging"
+  warehouse_dir: "data/warehouse"
+pipeline:
+  chunk_size: 1000
+  outlier_iqr_factor: 1.5
+  date_format: "%Y-%m-%d"
+logging:
+  level: "INFO"
